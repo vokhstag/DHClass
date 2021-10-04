@@ -16,7 +16,8 @@
 
 @property (strong, nonatomic) NSDictionary<NSString *, NSString *> *model;
 
--(NSInteger) numberOfElements;
+@property (strong, nonatomic) NSUInteger (^numberOfElements)(void);
+
 -(NSString *) elementName:(NSInteger) index;
 
 @end

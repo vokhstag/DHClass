@@ -10,8 +10,15 @@
 
 @implementation YAListPresenter
 
--(NSInteger) numberOfElements {
-    return _model.allKeys.count;
+- (id)init {
+    __weak typeof(self) weakSelf = [super init];
+    if (self) {
+        self.numberOfElements = ^{
+            return weakSelf.model.allKeys.count;
+        };
+    }
+
+    return self;
 }
 
 -(NSString *) elementName:(NSInteger) index {
