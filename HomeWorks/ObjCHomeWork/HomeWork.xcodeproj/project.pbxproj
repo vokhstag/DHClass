@@ -18,6 +18,7 @@
 		853E8410270B07D000B56679 /* YAListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E840F270B07D000B56679 /* YAListPresenter.m */; };
 		853E8417270B258D00B56679 /* YADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E8416270B258D00B56679 /* YADetailViewController.m */; };
 		853E841A270B264D00B56679 /* YADetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E8419270B264D00B56679 /* YADetailPresenter.m */; };
+		853E8425270B59B500B56679 /* InteropHWClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E8424270B59B500B56679 /* InteropHWClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		853E8416270B258D00B56679 /* YADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YADetailViewController.m; sourceTree = "<group>"; };
 		853E8419270B264D00B56679 /* YADetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YADetailPresenter.m; sourceTree = "<group>"; };
 		853E841C270B266300B56679 /* YADetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YADetailPresenter.h; sourceTree = "<group>"; };
+		853E8423270B59B400B56679 /* HomeWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeWork-Bridging-Header.h"; sourceTree = "<group>"; };
+		853E8424270B59B500B56679 /* InteropHWClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteropHWClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		853E83E02709F3E000B56679 /* HomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				853E8427270B5B7F00B56679 /* InteropHW */,
 				853E83E12709F3E000B56679 /* AppDelegate.h */,
 				853E83E22709F3E000B56679 /* AppDelegate.m */,
 				853E83E42709F3E000B56679 /* SceneDelegate.h */,
@@ -86,6 +90,7 @@
 				853E83EF2709F3E300B56679 /* LaunchScreen.storyboard */,
 				853E83F22709F3E300B56679 /* Info.plist */,
 				853E83F32709F3E300B56679 /* main.m */,
+				853E8423270B59B400B56679 /* HomeWork-Bridging-Header.h */,
 			);
 			path = HomeWork;
 			sourceTree = "<group>";
@@ -130,6 +135,14 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		853E8427270B5B7F00B56679 /* InteropHW */ = {
+			isa = PBXGroup;
+			children = (
+				853E8424270B59B500B56679 /* InteropHWClass.swift */,
+			);
+			path = InteropHW;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +173,7 @@
 				TargetAttributes = {
 					853E83DD2709F3E000B56679 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -198,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853E8425270B59B500B56679 /* InteropHWClass.swift in Sources */,
 				853E8403270ADB3F00B56679 /* ListViewController.m in Sources */,
 				853E8410270B07D000B56679 /* YAListPresenter.m in Sources */,
 				853E83E92709F3E000B56679 /* RootViewController.m in Sources */,
@@ -341,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35UW68W5U6;
 				INFOPLIST_FILE = HomeWork/Info.plist;
@@ -350,6 +366,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vokhstag.HomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeWork/HomeWork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35UW68W5U6;
 				INFOPLIST_FILE = HomeWork/Info.plist;
@@ -368,6 +388,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vokhstag.HomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HomeWork/HomeWork-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

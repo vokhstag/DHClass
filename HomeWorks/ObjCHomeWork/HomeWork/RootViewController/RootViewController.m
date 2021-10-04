@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "YAListPresenter.h"
 #import "YAModel.h"
+#import "HomeWork-Swift.h"
 
 @interface RootViewController ()
 
@@ -20,6 +21,10 @@ YAModel *model;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    InteropHWClass *swiftClass = [[InteropHWClass alloc] init];
+    
+    [swiftClass sayHelloFromSwift];
     
     model = [[YAModel alloc] init];
     UIButton *bicyclesButton = [UIButton buttonWithType:UIButtonTypeCustom];
