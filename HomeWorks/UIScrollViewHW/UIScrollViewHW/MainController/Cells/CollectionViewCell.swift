@@ -32,12 +32,18 @@ class CollectionViewCell: UICollectionViewCell {
         setup()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.contentView.layer.cornerRadius = self.contentView.bounds.height/2
+    }
+
 }
 
 // MARK: - Setup
 private extension CollectionViewCell {
     func setup() {
-        self.backgroundColor = .white
+        self.contentView.backgroundColor = .white
         setupLabel()
     }
     
